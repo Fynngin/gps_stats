@@ -79,11 +79,11 @@ function App() {
             case 'Core':
                 setCoreInfo(i => ({
                     ...i, 
-                    lockerOwners: (isInventory && isLocker) ? i.lockerOwners : i.lockerOwners.add(owner),
-                    lockerCirculation: (isInventory && isLocker) ? i.lockerCirculation : (i.lockerCirculation + 1),
+                    lockerOwners: (!isInventory && isLocker) ? i.lockerOwners.add(owner) : i.lockerOwners,
+                    lockerCirculation: (!isInventory && isLocker) ? (i.lockerCirculation + 1) : i.lockerCirculation,
                     lockerInventory: (isInventory && isLocker) ? (i.lockerInventory + 1) : i.lockerInventory,
-                    gearOwners: (isInventory && !isLocker) ? i.gearOwners : i.gearOwners.add(owner),
-                    gearCirculation: (isInventory && !isLocker) ? i.gearCirculation : (i.gearCirculation + 1),
+                    gearOwners: (!isInventory && !isLocker) ? i.gearOwners.add(owner) : i.gearOwners,
+                    gearCirculation: (!isInventory && !isLocker) ? (i.gearCirculation + 1) : i.gearCirculation,
                     gearInventory: (isInventory && !isLocker) ? (i.gearInventory + 1) : i.gearInventory,
                     totalOwners: isInventory ? i.totalOwners : i.totalOwners.add(owner),
                 }))
@@ -91,11 +91,11 @@ function App() {
             case 'Alloy':
                 setAlloyInfo(i => ({
                     ...i, 
-                    lockerOwners: (isInventory && isLocker) ? i.lockerOwners : i.lockerOwners.add(owner),
-                    lockerCirculation: (isInventory && isLocker) ? i.lockerCirculation : (i.lockerCirculation + 1),
+                    lockerOwners: (!isInventory && isLocker) ? i.lockerOwners.add(owner) : i.lockerOwners,
+                    lockerCirculation: (!isInventory && isLocker) ? (i.lockerCirculation + 1) : i.lockerCirculation,
                     lockerInventory: (isInventory && isLocker) ? (i.lockerInventory + 1) : i.lockerInventory,
-                    gearOwners: (isInventory && !isLocker) ? i.gearOwners : i.gearOwners.add(owner),
-                    gearCirculation: (isInventory && !isLocker) ? i.gearCirculation : (i.gearCirculation + 1),
+                    gearOwners: (!isInventory && !isLocker) ? i.gearOwners.add(owner) : i.gearOwners,
+                    gearCirculation: (!isInventory && !isLocker) ? (i.gearCirculation + 1) : i.gearCirculation,
                     gearInventory: (isInventory && !isLocker) ? (i.gearInventory + 1) : i.gearInventory,
                     totalOwners: isInventory ? i.totalOwners : i.totalOwners.add(owner),
                 }))
@@ -103,11 +103,11 @@ function App() {
             case 'Irid':
                 setIridInfo(i => ({
                     ...i, 
-                    lockerOwners: (isInventory && isLocker) ? i.lockerOwners : i.lockerOwners.add(owner),
-                    lockerCirculation: (isInventory && isLocker) ? i.lockerCirculation : (i.lockerCirculation + 1),
+                    lockerOwners: (!isInventory && isLocker) ? i.lockerOwners.add(owner) : i.lockerOwners,
+                    lockerCirculation: (!isInventory && isLocker) ? (i.lockerCirculation + 1) : i.lockerCirculation,
                     lockerInventory: (isInventory && isLocker) ? (i.lockerInventory + 1) : i.lockerInventory,
-                    gearOwners: (isInventory && !isLocker) ? i.gearOwners : i.gearOwners.add(owner),
-                    gearCirculation: (isInventory && !isLocker) ? i.gearCirculation : (i.gearCirculation + 1),
+                    gearOwners: (!isInventory && !isLocker) ? i.gearOwners.add(owner) : i.gearOwners,
+                    gearCirculation: (!isInventory && !isLocker) ? (i.gearCirculation + 1) : i.gearCirculation,
                     gearInventory: (isInventory && !isLocker) ? (i.gearInventory + 1) : i.gearInventory,
                     totalOwners: isInventory ? i.totalOwners : i.totalOwners.add(owner),
                 }))
@@ -115,11 +115,11 @@ function App() {
             case 'Lume':
                 setLumeInfo(i => ({
                     ...i, 
-                    lockerOwners: (isInventory && isLocker) ? i.lockerOwners : i.lockerOwners.add(owner),
-                    lockerCirculation: (isInventory && isLocker) ? i.lockerCirculation : (i.lockerCirculation + 1),
+                    lockerOwners: (!isInventory && isLocker) ? i.lockerOwners.add(owner) : i.lockerOwners,
+                    lockerCirculation: (!isInventory && isLocker) ? (i.lockerCirculation + 1) : i.lockerCirculation,
                     lockerInventory: (isInventory && isLocker) ? (i.lockerInventory + 1) : i.lockerInventory,
-                    gearOwners: (isInventory && !isLocker) ? i.gearOwners : i.gearOwners.add(owner),
-                    gearCirculation: (isInventory && !isLocker) ? i.gearCirculation : (i.gearCirculation + 1),
+                    gearOwners: (!isInventory && !isLocker) ? i.gearOwners.add(owner) : i.gearOwners,
+                    gearCirculation: (!isInventory && !isLocker) ? (i.gearCirculation + 1) : i.gearCirculation,
                     gearInventory: (isInventory && !isLocker) ? (i.gearInventory + 1) : i.gearInventory,
                     totalOwners: isInventory ? i.totalOwners : i.totalOwners.add(owner),
                 }))
@@ -127,11 +127,11 @@ function App() {
             case 'Prime':
                 setPrimeInfo(i => ({
                     ...i, 
-                    lockerOwners: (isInventory && isLocker) ? i.lockerOwners : i.lockerOwners.add(owner),
-                    lockerCirculation: (isInventory && isLocker) ? i.lockerCirculation : (i.lockerCirculation + 1),
+                    lockerOwners: (!isInventory && isLocker) ? i.lockerOwners.add(owner) : i.lockerOwners,
+                    lockerCirculation: (!isInventory && isLocker) ? (i.lockerCirculation + 1) : i.lockerCirculation,
                     lockerInventory: (isInventory && isLocker) ? (i.lockerInventory + 1) : i.lockerInventory,
-                    gearOwners: (isInventory && !isLocker) ? i.gearOwners : i.gearOwners.add(owner),
-                    gearCirculation: (isInventory && !isLocker) ? i.gearCirculation : (i.gearCirculation + 1),
+                    gearOwners: (!isInventory && !isLocker) ? i.gearOwners.add(owner) : i.gearOwners,
+                    gearCirculation: (!isInventory && !isLocker) ? (i.gearCirculation + 1) : i.gearCirculation,
                     gearInventory: (isInventory && !isLocker) ? (i.gearInventory + 1) : i.gearInventory,
                     totalOwners: isInventory ? i.totalOwners : i.totalOwners.add(owner),
                 }))
